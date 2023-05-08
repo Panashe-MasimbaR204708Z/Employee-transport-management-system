@@ -4,14 +4,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:etms_attachment_project/screens/profile.dart';
 import 'package:etms_attachment_project/screens/routes.dart';
-//import 'package:project_app/complaintspage.dart';
-//import 'package:project_app/crimespage.dart';
-//import 'package:project_app/database.dart';
-//import 'package:project_app/missingpage.dart';
-//import 'package:project_app/navBarPages/editprofile.dart';
-//import 'package:project_app/navBarPages/addnewcomplaint.dart';
-//import 'package:project_app/navBarPages/addnewcrime.dart';
-//import 'package:project_app/navBarPages/addnewmissing.dart';
 import 'package:etms_attachment_project/screens/login_screen.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:geocoding/geocoding.dart';
@@ -90,51 +82,6 @@ class _HomePageState extends State<HomePage> {
 
   //late Database db;
 
-  // crimes latest
-  String headlineLatest = '';
-  // imageAsset latest
-
-  // missing latest
-  String nameLatest = '';
-  int ageLatest = 0;
-  // imageAsset
-
-  // complaint latest
-  String complaintLatest = '';
-
-  /*initialise() {
-    db = Database();
-    db.initiliase();
-    db.readCrimes().then((value) => {
-          if (this.mounted)
-            {
-              setState(() {
-                docCrimes = value!;
-                headlineLatest = docCrimes[0]['headline'];
-              })
-            }
-        });
-    db.readMissing().then((value) => {
-          if (this.mounted)
-            {
-              setState(() {
-                docMissing = value!;
-                nameLatest = docMissing[0]['name'];
-                ageLatest = docMissing[0]['age'];
-              })
-            }
-        });
-    db.readComplaints().then((value) => {
-          if (this.mounted)
-            {
-              setState(() {
-                docComplaints = value!;
-                complaintLatest = docComplaints[0]['complaint'];
-              })
-            }
-        });
-  }*/
-
   List docCrimes = [];
   List docMissing = [];
   List docComplaints = [];
@@ -144,12 +91,6 @@ class _HomePageState extends State<HomePage> {
   final TextEditingController destinationController = TextEditingController();
   final TextEditingController pickupTimeController = TextEditingController();
   final TextEditingController dropoffTimeController = TextEditingController();
-
-  /*@override
-  void initState() {
-    super.initState();
-    initialise();
-  }*/
 
   Widget build(BuildContext context) {
     return DefaultTabController(
